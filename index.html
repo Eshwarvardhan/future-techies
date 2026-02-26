@@ -1,248 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Future Techies | Innovating Tomorrow</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Techies | Innovating Tomorrow</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Poppins', sans-serif;
-        }
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        body{
-            background:#f4f7fa;
-            color:#333;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
 
-        header{
-            background:#0a192f;
-            padding:20px 60px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            position:fixed;
-            width:100%;
-            top:0;
-            z-index:1000;
-        }
+body{
+    background:#f4f7fa;
+    color:#333;
+}
 
-        header h1{
-            color:#64ffda;
-            font-size:24px;
-        }
+/* HEADER */
+header{
+    background:#0a192f;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin-left:25px;
-            font-weight:500;
-            transition:0.3s;
-        }
+header h1{
+    color:#64ffda;
+}
 
-        nav a:hover{
-            color:#64ffda;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
+    transition:0.3s;
+}
 
-        section{
-            padding:100px 60px;
-        }
+nav a:hover{
+    color:#64ffda;
+}
 
-        .hero{
-            background:linear-gradient(to right,#0a192f,#112240);
-            color:white;
-            text-align:center;
-            padding-top:160px;
-            padding-bottom:140px;
-        }
+section{
+    padding:100px 60px;
+}
 
-        .hero h2{
-            font-size:48px;
-            margin-bottom:20px;
-        }
+.hero{
+    background:linear-gradient(to right,#0a192f,#112240);
+    color:white;
+    text-align:center;
+    padding-top:160px;
+    padding-bottom:140px;
+}
 
-        .hero p{
-            font-size:18px;
-            max-width:700px;
-            margin:auto;
-            margin-bottom:30px;
-        }
+.hero h2{
+    font-size:48px;
+    margin-bottom:20px;
+}
 
-        .btn{
-            padding:12px 30px;
-            background:#64ffda;
-            color:#0a192f;
-            text-decoration:none;
-            border-radius:30px;
-            font-weight:600;
-            transition:0.3s;
-        }
+.hero p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+}
 
-        .btn:hover{
-            background:white;
-        }
+.btn{
+    padding:12px 30px;
+    background:#64ffda;
+    color:#0a192f;
+    text-decoration:none;
+    border:none;
+    border-radius:30px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
 
-        .about, .services, .projects, .contact{
-            text-align:center;
-        }
+.btn:hover{
+    background:white;
+}
 
-        h3{
-            font-size:32px;
-            margin-bottom:20px;
-            color:#0a192f;
-        }
+h3{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:20px;
+    color:#0a192f;
+}
 
-        .content{
-            max-width:900px;
-            margin:auto;
-            line-height:1.7;
-        }
+.content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.7;
+}
 
-        .service-boxes, .project-boxes{
-            display:flex;
-            justify-content:center;
-            gap:30px;
-            margin-top:40px;
-            flex-wrap:wrap;
-        }
+/* BOXES */
+.service-boxes, .project-boxes{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
 
-        .box{
-            background:white;
-            padding:30px;
-            width:280px;
-            border-radius:10px;
-            box-shadow:0 5px 20px rgba(0,0,0,0.1);
-            transition:0.3s;
-        }
+.box{
+    background:white;
+    padding:30px;
+    width:280px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
 
-        .box:hover{
-            transform:translateY(-10px);
-        }
+.box:hover{
+    transform:translateY(-10px);
+}
 
-        .box h4{
-            margin-bottom:15px;
-            color:#112240;
-        }
+/* CONTACT */
+.contact form{
+    max-width:500px;
+    margin:30px auto 0;
+    display:flex;
+    flex-direction:column;
+}
 
-        .contact form{
-            max-width:500px;
-            margin:auto;
-            margin-top:30px;
-            display:flex;
-            flex-direction:column;
-        }
+input, textarea{
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
 
-        input, textarea{
-            padding:12px;
-            margin-bottom:15px;
-            border:1px solid #ccc;
-            border-radius:5px;
-        }
+.social-icons{
+    text-align:center;
+    margin-top:30px;
+}
 
-        footer{
-            background:#0a192f;
-            color:white;
-            text-align:center;
-            padding:20px;
-        }
+.social-icons a{
+    color:#0a192f;
+    font-size:22px;
+    margin:0 12px;
+    transition:0.3s;
+}
 
-        @media(max-width:768px){
-            header{
-                flex-direction:column;
-            }
-            nav{
-                margin-top:10px;
-            }
-            .hero h2{
-                font-size:32px;
-            }
-        }
-    </style>
+.social-icons a:hover{
+    color:#64ffda;
+}
+
+/* FOOTER */
+footer{
+    background:#0a192f;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+    }
+    nav{
+        margin-top:10px;
+    }
+    .hero h2{
+        font-size:32px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Future Techies</h1>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<h1>Future Techies</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section id="home" class="hero">
-    <h2>Innovating Tomorrow’s Technology</h2>
-    <p>Future Techies is a forward-thinking technology initiative focused on building intelligent, scalable, and innovative digital solutions for the next generation.</p>
-    <a href="#contact" class="btn">Get Started</a>
+<h2>Innovating Tomorrow’s Technology</h2>
+<p>Future Techies is a forward-thinking technology initiative focused on building intelligent, scalable, and innovative digital solutions for the next generation.</p>
+<a href="#contact" class="btn">Get Started</a>
 </section>
 
-<section id="about" class="about">
-    <h3>About Us</h3>
-    <div class="content">
-        <p>
-            Future Techies is a professional technology-driven platform dedicated to innovation in Artificial Intelligence, Web Development, Cybersecurity, and Emerging Technologies. 
-            Our mission is to empower students and developers with real-world tech solutions and hands-on project experience.
-        </p>
-    </div>
+<section id="about">
+<h3>About Us</h3>
+<div class="content">
+<p>
+Future Techies is a professional technology-driven platform dedicated to innovation in Artificial Intelligence, Web Development, Cybersecurity, and Emerging Technologies. 
+Our mission is to empower students and developers with real-world tech solutions and hands-on project experience.
+</p>
+</div>
 </section>
 
-<section id="services" class="services">
-    <h3>Our Services</h3>
-    <div class="service-boxes">
-        <div class="box">
-            <h4>AI & Machine Learning</h4>
-            <p>Developing intelligent systems using modern AI technologies to solve real-world problems.</p>
-        </div>
-        <div class="box">
-            <h4>Web Development</h4>
-            <p>Creating responsive, modern and scalable websites and web applications.</p>
-        </div>
-        <div class="box">
-            <h4>Cyber Security</h4>
-            <p>Building secure systems and educating about digital safety and ethical hacking.</p>
-        </div>
-    </div>
+<section id="services">
+<h3>Our Services</h3>
+<div class="service-boxes">
+<div class="box">
+<h4>AI & Machine Learning</h4>
+<p>Developing intelligent systems using modern AI technologies to solve real-world problems.</p>
+</div>
+<div class="box">
+<h4>Web Development</h4>
+<p>Creating responsive, modern and scalable websites and web applications.</p>
+</div>
+<div class="box">
+<h4>Cyber Security</h4>
+<p>Building secure systems and educating about digital safety and ethical hacking.</p>
+</div>
+</div>
 </section>
 
-<section id="projects" class="projects">
-    <h3>Our Projects</h3>
-    <div class="project-boxes">
-        <div class="box">
-            <h4>AI Disaster Detection</h4>
-            <p>An AI-based system to detect and analyze natural disasters using image processing.</p>
-        </div>
-        <div class="box">
-            <h4>Smart Agriculture System</h4>
-            <p>Machine learning model for predicting crop yield and providing smart farming solutions.</p>
-        </div>
-        <div class="box">
-            <h4>Spam Detection System</h4>
-            <p>Text classification model to differentiate between spam and legitimate messages.</p>
-        </div>
-    </div>
+<section id="projects">
+<h3>Our Projects</h3>
+<div class="project-boxes">
+<div class="box">
+<h4>AI Disaster Detection</h4>
+<p>An AI-based system to detect and analyze natural disasters using image processing.</p>
+</div>
+<div class="box">
+<h4>Smart Agriculture System</h4>
+<p>Machine learning model for predicting crop yield and providing smart farming solutions.</p>
+</div>
+<div class="box">
+<h4>Spam Detection System</h4>
+<p>Text classification model to differentiate between spam and legitimate messages.</p>
+</div>
+</div>
 </section>
 
 <section id="contact" class="contact">
-    <h3>Contact Us</h3>
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="5" placeholder="Your Message"></textarea>
-        <button class="btn" type="submit">Send Message</button>
-    </form>
+<h3>Contact Us</h3>
+<div class="content">
+<p>Send us a message and we’ll respond shortly.</p>
+</div>
+
+<form action="https://formsubmit.co/your@email.com" method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+<button type="submit" class="btn">Send Message</button>
+</form>
+
+<div class="social-icons">
+<a href="#"><i class="fab fa-google"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-chrome"></i></a>
+</div>
+
 </section>
 
 <footer>
-    <p>© 2026 Future Techies. All Rights Reserved.</p>
+<p>© 2026 Future Techies. All Rights Reserved.</p>
 </footer>
 
 </body>
