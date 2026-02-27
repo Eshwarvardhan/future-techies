@@ -88,6 +88,8 @@ nav a:hover{ color:#00ffd5; }
 
 .card img{
     width:100%;
+    height:180px;
+    object-fit:cover;
     border-radius:10px;
 }
 
@@ -121,6 +123,15 @@ button{
 
 button:hover{ background:white; }
 
+.response-box{
+    margin-top:30px;
+    padding:25px;
+    background:rgba(255,255,255,0.12);
+    border-radius:12px;
+    display:none;
+    text-align:left;
+}
+
 footer{
     text-align:center;
     padding:20px;
@@ -150,29 +161,25 @@ footer{
 <!-- Career Growth -->
 <section id="career" class="section">
 <h2>📈 Career Growth</h2>
-<p>
-We guide students with clear career roadmaps, required skills,
-learning paths and real-world industry roles to help them choose the
-right technology career confidently.
-</p>
+<p>Clear roadmaps and skills for future technology careers.</p>
 
 <div class="cards">
 <div class="card">
 <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
 <h3>Software Developer</h3>
-<p>Learn HTML, CSS, JavaScript, Python & Java to become a full-stack developer.</p>
+<p>Frontend, Backend & Full-Stack development.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
 <h3>AI & ML Engineer</h3>
-<p>Build intelligent systems using Python, Machine Learning & Deep Learning.</p>
+<p>Build intelligent systems using data and algorithms.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87">
 <h3>Cyber Security</h3>
-<p>Protect systems, networks and data from cyber threats.</p>
+<p>Protect systems and networks from cyber attacks.</p>
 </div>
 </div>
 </section>
@@ -180,28 +187,25 @@ right technology career confidently.
 <!-- Projects -->
 <section id="projects" class="section">
 <h2>💡 Student Projects</h2>
-<p>
-Our projects are designed to solve real-life problems and help students
-build strong resumes for placements and higher studies.
-</p>
+<p>Real-world projects for placements and higher studies.</p>
 
 <div class="cards">
 <div class="card">
 <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
 <h3>AI Attendance System</h3>
-<p>Face recognition based smart attendance for colleges.</p>
+<p>Face recognition based smart attendance.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4">
 <h3>Mood Based Music AI</h3>
-<p>Plays music automatically based on voice and mood.</p>
+<p>Voice-controlled mood music player.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998">
 <h3>AI Doubt Solver</h3>
-<p>An intelligent chatbot that answers student academic doubts.</p>
+<p>Chatbot to solve student academic doubts.</p>
 </div>
 </div>
 </section>
@@ -209,9 +213,7 @@ build strong resumes for placements and higher studies.
 <!-- AI Tools -->
 <section id="tools" class="section">
 <h2>🤖 AI Tools</h2>
-<p>
-AI tools to make student life easier, smarter and more productive.
-</p>
+<p>Smart tools to improve productivity.</p>
 
 <div class="cards">
 <div class="card">
@@ -221,15 +223,15 @@ AI tools to make student life easier, smarter and more productive.
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f">
-<h3>Assignment Generator</h3>
-<p>Generate notes and assignments using AI.</p>
+<img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a">
+<h3>Career Recommender</h3>
+<p>AI-based career suggestions using skills & interests.</p>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a">
-<h3>Career Recommender</h3>
-<p>Get career suggestions based on skills.</p>
+<img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f">
+<h3>Assignment Generator</h3>
+<p>Generate notes & assignments automatically.</p>
 </div>
 </div>
 </section>
@@ -246,24 +248,57 @@ AI tools to make student life easier, smarter and more productive.
 </form>
 </section>
 
-<!-- Contact (CENTERED) -->
+<!-- Contact -->
 <section id="contact" class="section">
 <h2>📞 Contact Us</h2>
 <p>Email: futuretechies@gmail.com</p>
 <p>Phone: +91 9XXXXXXXXX</p>
-<p>Helping students grow with technology ❤️</p>
 
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea rows="4" placeholder="Your Message"></textarea>
-<button>Send Message</button>
+<form onsubmit="handleMessage(event)">
+<input type="text" id="uname" placeholder="Your Name" required>
+<input type="email" id="uemail" placeholder="Your Email" required>
+<textarea id="umsg" rows="4" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
 </form>
+
+<div class="response-box" id="responseBox"></div>
 </section>
 
 <footer>
 © 2026 Future Techies | Built for Students
 </footer>
+
+<script>
+function handleMessage(event){
+    event.preventDefault();
+
+    let name = uname.value;
+    let email = uemail.value;
+    let msg = umsg.value.toLowerCase();
+    let box = document.getElementById("responseBox");
+
+    if(msg.includes("ai")){
+        box.innerHTML = `
+        <h3 style="color:#00ffd5;">🤖 Artificial Intelligence (AI)</h3>
+        <p>AI allows machines to think and learn like humans.</p>
+        <ul>
+            <li>Chatbots</li>
+            <li>Face Recognition</li>
+            <li>Medical Diagnosis</li>
+            <li>Recommendation Systems</li>
+            <li>Self-Driving Cars</li>
+        </ul>
+        <p><strong>Asked by:</strong> ${name}</p>`;
+    } else {
+        box.innerHTML = `
+        <h3 style="color:#00ffd5;">✅ Message Submitted</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong> ${umsg.value}</p>`;
+    }
+    box.style.display = "block";
+}
+</script>
 
 </body>
 </html>
