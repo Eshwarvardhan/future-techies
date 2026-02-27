@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Future Techies</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    background:url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d") no-repeat center center fixed;
+    background-size:cover;
+    color:white;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,0.65);
+    z-index:-1;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:rgba(0,0,0,0.75);
+}
+
+header h1{ color:#00ffd5; }
+
+nav a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:bold;
+}
+nav a:hover{ color:#00ffd5; }
+
+.hero{
+    text-align:center;
+    padding:120px 20px;
+}
+.hero h2{ font-size:42px; }
+.hero p{ font-size:20px; }
+
+.section{
+    margin:40px;
+    padding:50px;
+    background:rgba(0,0,0,0.65);
+    border-radius:15px;
+}
+
+.section h2{
+    color:#00ffd5;
+    margin-bottom:15px;
+    text-align:center;
+}
+
+.section p{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:18px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:300px;
+    background:rgba(255,255,255,0.1);
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.card h3{
+    color:#00ffd5;
+    margin:10px 0;
+}
+
+form{
+    max-width:400px;
+    margin:auto;
+    text-align:center;
+}
+
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:12px;
+    border:none;
+    border-radius:6px;
+}
+
+button{
+    padding:10px 25px;
+    background:#00ffd5;
+    border:none;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{ background:white; }
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.8);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Future Techies</h1>
+<nav>
+<a href="#career">Career</a>
+<a href="#projects">Projects</a>
+<a href="#tools">AI Tools</a>
+<a href="#register">Register</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Future Techies 🚀</h2>
+<p>Guiding Students Towards Technology Careers</p>
+</section>
+
+<!-- Career Growth -->
+<section id="career" class="section">
+<h2>📈 Career Growth</h2>
+<p>
+We guide students with clear career roadmaps, required skills,
+learning paths and real-world industry roles to help them choose the
+right technology career confidently.
+</p>
+
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+<h3>Software Developer</h3>
+<p>Learn HTML, CSS, JavaScript, Python & Java to become a full-stack developer.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
+<h3>AI & ML Engineer</h3>
+<p>Build intelligent systems using Python, Machine Learning & Deep Learning.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87">
+<h3>Cyber Security</h3>
+<p>Protect systems, networks and data from cyber threats.</p>
+</div>
+</div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section">
+<h2>💡 Student Projects</h2>
+<p>
+Our projects are designed to solve real-life problems and help students
+build strong resumes for placements and higher studies.
+</p>
+
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
+<h3>AI Attendance System</h3>
+<p>Face recognition based smart attendance for colleges.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4">
+<h3>Mood Based Music AI</h3>
+<p>Plays music automatically based on voice and mood.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1531482615713-2afd69097998">
+<h3>AI Doubt Solver</h3>
+<p>An intelligent chatbot that answers student academic doubts.</p>
+</div>
+</div>
+</section>
+
+<!-- AI Tools -->
+<section id="tools" class="section">
+<h2>🤖 AI Tools</h2>
+<p>
+AI tools to make student life easier, smarter and more productive.
+</p>
+
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4">
+<h3>Resume Generator</h3>
+<p>Create professional resumes instantly.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f">
+<h3>Assignment Generator</h3>
+<p>Generate notes and assignments using AI.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a">
+<h3>Career Recommender</h3>
+<p>Get career suggestions based on skills.</p>
+</div>
+</div>
+</section>
+
+<!-- Registration -->
+<section id="register" class="section">
+<h2>📝 Student Registration</h2>
+<form>
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email" required>
+<input type="text" placeholder="College Name">
+<input type="password" placeholder="Password" required>
+<button>Register</button>
+</form>
+</section>
+
+<!-- Contact (CENTERED) -->
+<section id="contact" class="section">
+<h2>📞 Contact Us</h2>
+<p>Email: futuretechies@gmail.com</p>
+<p>Phone: +91 9XXXXXXXXX</p>
+<p>Helping students grow with technology ❤️</p>
+
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="4" placeholder="Your Message"></textarea>
+<button>Send Message</button>
+</form>
+</section>
+
+<footer>
+© 2026 Future Techies | Built for Students
+</footer>
+
+</body>
+</html>
